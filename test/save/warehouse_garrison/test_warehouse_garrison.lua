@@ -1,0 +1,1 @@
+-- we don't need to do anything, the main test script contains all that we need
