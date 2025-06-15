@@ -9,7 +9,7 @@ run(function()
    assert_equal(11, hq:get_workers("barbarians_soldier"))
 
    hq.soldier_preference = "heroes"
-   hq.capacity = 10  -- one free soldier
+   hq.garrison = 10  -- one free soldier
 
    -- Connect sentry to HQ, the weakest soldier should occupy the sentry
    print("Allowing only the weakest soldier to the sentry")
@@ -29,7 +29,7 @@ run(function()
 
    -- Free up more soldiers
    print("Allow stronger soldiers to the sentry")
-   hq.capacity = 3
+   hq.garrison = 3
 
    sleep(1000)
    while sentry:get_soldiers("present") < 2 or sentry:get_soldiers("associated") > 2 do
